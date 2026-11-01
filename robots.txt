@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://https://github.com/mkharintsako0-netizen/mkhari_st10531474_WEDE5020_POE/sitemap.xml

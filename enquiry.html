@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get a Free Cleaning Quote | EcoShine</title>
+    <meta name="description" content="Request an instant EcoShine cleaning estimate. Choose a service, quantity and date to see the cost including VAT and our availability.">
+    <meta name="keywords" content="cleaning quote, cleaning enquiry, eco-friendly cleaning prices, book cleaning service">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Service Enquiry</h1>
+        <p>Get an estimated cost and see our availability.</p>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="EcoShine Logo" style="width: 100px;">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="enquiry">
+            <h2>Request a quote</h2>
+            <p>Tell us what you need. We will show your estimated cost (including 15% VAT) and availability once your details are checked.</p>
+
+            <form id="enquiry-form" action="#" method="post" novalidate>
+                <label for="name">Full name
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name" data-validate="name">
+                    <span class="field-error" id="name-error" aria-live="polite"></span>
+                </label>
+
+                <label for="email">Email
+                    <input type="email" id="email" name="email" required autocomplete="email" data-validate="email">
+                    <span class="field-error" id="email-error" aria-live="polite"></span>
+                </label>
+
+                <label for="phone">Phone number
+                    <input type="tel" id="phone" name="phone" required pattern="^(\+27|0)[0-9 ]{9,12}$" placeholder="012 345 6789" autocomplete="tel" data-validate="phone">
+                    <span class="field-error" id="phone-error" aria-live="polite"></span>
+                </label>
+
+                <label for="service">Service
+                    <select id="service" name="service" required data-validate="service">
+                        <option value="">Choose a service...</option>
+                    </select>
+                    <span class="field-hint" id="price-hint"></span>
+                    <span class="field-error" id="service-error" aria-live="polite"></span>
+                </label>
+
+                <label for="quantity"><span id="quantity-label">Quantity</span>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="1" required data-validate="quantity">
+                    <span class="field-error" id="quantity-error" aria-live="polite"></span>
+                </label>
+
+                <label for="date">Preferred date (Monday to Friday)
+                    <input type="date" id="date" name="date" required data-validate="date">
+                    <span class="field-error" id="date-error" aria-live="polite"></span>
+                </label>
+
+                <label for="notes">Extra notes (optional)
+                    <textarea id="notes" name="notes" rows="4" maxlength="300" data-validate="notes"></textarea>
+                    <span class="field-error" id="notes-error" aria-live="polite"></span>
+                </label>
+
+                <button type="submit">Get my estimate</button>
+            </form>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+            <div id="enquiry-result" class="result-box" hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoShine. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

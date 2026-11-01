@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact - EcoShine</title>
+    <title>Contact EcoShine | Eco-Friendly Cleaning</title>
+    <meta name="description" content="EcoShine offers eco-friendly residential, commercial, window, carpet and exterior cleaning in South Africa. See our prices and get a free quote today.">
+    <meta name="keywords" content="eco-friendly cleaning, green cleaning South Africa, residential cleaning, commercial cleaning, carpet cleaning, window washing">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "EcoShine",
+            "description": "Eco-friendly cleaning services for homes, businesses and vehicles.",
+            "telephone": "+27 12 345 6789",
+            "email": "info@ecoshine.co.za",
+            "openingHours": "Mo-Fr 09:00-17:00",
+            "priceRange": "R100 - R300",
+            "areaServed": "South Africa"
+        }
+    </script>
     <link rel="stylesheet" href="stylesheet1.css">
 </head>
 
@@ -41,17 +57,30 @@
                 <p><strong>Operating Hours:</strong> 9:00 AM - 5:00 PM, Monday to Friday</p>
             </div>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <form id="contact-form" action="mailto:info@ecoshine.co.za" method="post" enctype="text/plain" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="2" maxlength="60">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" id="phone" name="phone" pattern="^(\+27|0)[0-9 ]{9,12}$" placeholder="012 345 6789">
 
-            <button type="submit">Send Message</button>
+                <label for="type">Type of message:</label>
+                <select id="type" name="type" required>
+        <option value="">Choose one...</option>
+        <option value="general">General question</option>
+        <option value="booking">Booking request</option>
+        <option value="feedback">Feedback</option>
+        <option value="complaint">Complaint</option>
+    </select>
 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
 
         </section>
     </main>
